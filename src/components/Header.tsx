@@ -14,11 +14,13 @@ export default async function Header() {
               {settings.data.name}
             </Link>
           </li>
-          {settings.data.nav_item.map(({ link, label }, index) => (
-            <li key={index}>
-              <PrismicNextLink field={link}>{label}</PrismicNextLink>
-            </li>
-          ))}
+          {settings.data.nav_item.map(({ link, label }, index) => {
+            return (
+              <li key={index}>
+                <PrismicNextLink field={link}>{label}</PrismicNextLink>
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </header>
